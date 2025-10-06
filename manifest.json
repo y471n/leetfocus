@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "LeetFocus",
+  "version": "0.1",
+  "description": "LeetFocus to train DSA on LeetCode",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://leetcode.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "48": "icon.png"
+  }
+}
