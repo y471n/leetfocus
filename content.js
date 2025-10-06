@@ -1,11 +1,19 @@
 if (!window.LeetFocusObserverInitialized) {
   window.LeetFocusObserverInitialized = true;
-  console.log("LeetFocusObserver initialized");
+  const querySelectors = [
+    "p.text-lc-yellow-60",
+    "p.text-lc-green-60",
+    "p.text-lc-red-60",
+    "div.text-difficulty-hard",
+    "div.text-difficulty-medium",
+    "div.text-difficulty-easy",
+    "text-sd-easy",
+    "text-sd-medium",
+    "text-sd-hard",
+  ];
 
   function setLabelVisibility(hide) {
-    const labels = document.querySelectorAll(
-      "p.text-lc-yellow-60, p.text-lc-green-60, p.text-lc-red-60, div.text-difficulty-hard, div.text-difficulty-medium, div.text-difficulty-easy"
-    );
+    const labels = document.querySelectorAll(querySelectors.join(", "));
     console.log("Setting label visibility:", hide);
     console.log("Found labels:", labels.length);
     labels.forEach((label) => {
