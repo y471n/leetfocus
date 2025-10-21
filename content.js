@@ -7,9 +7,9 @@ if (!window.LeetFocusObserverInitialized) {
     "div.text-difficulty-hard",
     "div.text-difficulty-medium",
     "div.text-difficulty-easy",
-    "text-sd-easy",
-    "text-sd-medium",
-    "text-sd-hard",
+    "p.text-sd-easy",
+    "p.text-sd-medium",
+    "p.text-sd-hard",
   ];
 
   function setLabelVisibility(hide) {
